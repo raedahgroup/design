@@ -79,12 +79,32 @@
                                         <span class="currencyName"> Last 7 Days</span>
                                     </div>
                                 </div>
+                                <div class="col-sm-12">
+                                    <div class="row transactionbar">
+                                        <div class="col-2">
+                                            <p>Maturity:</p>
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span>198 of 248 blocks</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="transactionDetails">
                             <div class="row">
                                 <div class="col-12">
                                     <span><img src="" alt=""><p class="statcard-title">Transaction Details </p></span>
+                                </div>
+                                <div class="row alignvcenter ticketspent">
+                                    <div class="col-3 title">
+                                        <p>Ticket Spent:</p>
+                                    </div>
+                                    <div class="col-9">
+                                        <p class="address">4dcb853a64e12b5fb4943ae6553567cd43e54094d872d5ef12850f3e1a2ee0f7</p>
+                                    </div>
                                 </div>
                             </div>
                             <div class="row">
@@ -121,7 +141,7 @@
                     <div class="row">
                         <div class="col-md-6">
                             <div class="tableWrapper">
-
+                                <p class="title">Input</p>
                                 <table id="blockchainTable">
                                     <tr class="heading">
                                         <th>Previous Outpoint</th>
@@ -131,32 +151,29 @@
                                     </tr>
                                     <tr class="data">
                                         <td class="blocks">1e7142a9f5ad4aeb449…</td>
-                                        <td>DsmJ1seYkoXa4AbVxwv6Y…</td>
-                                        <td>219329</td>
-                                        <td>42.7089785</td>
+                                        <td class="blocks hover-underline">DsmJ1seYkoXa4AbVxwv6Y…</td>
+                                        <td class="blocks hover-underline">219329</td>
+                                        <td >42.7089785</td>
                                     </tr>
                                     <tr class="data">
                                         <td class="blocks"></td>
-                                        <td>DsmJ1seYkoXa4AbVxwv6Y…</td>
-                                        <td>219328</td>
+                                        <td class="blocks hover-underline">DsmJ1seYkoXa4AbVxwv6Y…</td>
+                                        <td class="blocks hover-underline">219328</td>
                                         <td>1048.4589785</td>
                                     </tr>
                                     <tr class="data">
                                         <td class="blocks"></td>
-                                        <td>DsmJ1seYkoXa4AbVxwv6Y…</td>
-                                        <td>219325</td>
+                                        <td class="blocks hover-underline">DsmJ1seYkoXa4AbVxwv6Y…</td>
+                                        <td class="blocks hover-underline">219325</td>
                                         <td>2</td>
                                     </tr>
-
                                 </table>
-
-
                             </div>
                         </div>
 
                         <div class="col-md-6">
                             <div class="tableWrapper">
-
+                                <p class="title">Output</p>
                                 <table id="blockchainTable">
                                     <tr class="heading">
                                         <th>Address</th>
@@ -165,22 +182,68 @@
                                         <th>DCR</th>
                                     </tr>
                                     <tr class="data">
-                                        <td class="blocks">Dskna9rG47cAcbGSwF2gmnagM4MtG2772wv</td>
+                                        <td class="blocks hover-underline">Dskna9rG47cAcbGSwF2gmnagM4MtG2772wv</td>
                                         <td>pubkeyhash</td>
                                         <td>true</td>
                                         <td>80.805698</td>
                                     </tr>
                                     <tr class="data">
-                                        <td class="blocks"></td>
+                                        <td class="blocks hover-underline">Dskna9rG47cAcbGSwF2gmnagM4MtG2772wv</td>
                                         <td>pubkeyhash</td>
                                         <td>true</td>
                                         <td>23.886598</td>
 
                                     </tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 voteinfo">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="tableWrapper">
+                                <p class="title">Vote Info</p>
+                                <table id="voteinfotable">
+                                    <tr class="heading">
+                                        <th>Issue ID</th>
+                                        <th>Description</th>
+                                        <th>Choice ID</th>
+                                        <th>Choice Description</th>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">lnfeatures</td>
+                                        <td>Enable features defined in DCP002 and DCP0003 necessary to support Lightning Network (LN)</td>
+                                        <td><span class="yes"></span>Yes</td>
+                                        <td>Change to the new consensus rules</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">lnfeatures</td>
+                                        <td>Enable features defined in DCP002 and DCP0003 necessary to support Lightning Network (LN)</td>
+                                        <td><span class="yes"></span>Yes</td>
+                                        <td>Change to the new consensus rules</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">lnfeatures</td>
+                                        <td>Enable features defined in DCP002 and DCP0003 necessary to support Lightning Network (LN)</td>
+                                        <td><span class="yes"></span>Yes</td>
+                                        <td>Change to the new consensus rules</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">lnfeatures</td>
+                                        <td>Enable features defined in DCP002 and DCP0003 necessary to support Lightning Network (LN)</td>
+                                        <td><span class="abstain"></span>Yes</td>
+                                        <td>Change to the new consensus rules</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">lnfeatures</td>
+                                        <td>Enable features defined in DCP002 and DCP0003 necessary to support Lightning Network (LN)</td>
+                                        <td><span class="no"></span>Yes</td>
+                                        <td>Change to the new consensus rules</td>
+                                    </tr>
 
                                 </table>
-
-
                             </div>
                         </div>
                     </div>

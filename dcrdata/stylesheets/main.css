@@ -2,6 +2,9 @@
 ::-webkit-scrollbar {
   display: none; }
 
+.alignvcenter {
+  align-items: center; }
+
 #mainContainer {
   padding-bottom: 60px;
   height: calc( 100vh - 114px);
@@ -490,6 +493,20 @@ footer {
     font-family: "Source Sans Pro", sans-serif; }
     .detailCardWrap .detailCard img {
       float: left; }
+    .detailCardWrap .detailCard .transactionbar {
+      padding-top: 15px;
+      align-items: center; }
+      .detailCardWrap .detailCard .transactionbar p {
+        margin-bottom: 0px;
+        font-size: 12px;
+        font-weight: 600; }
+      .detailCardWrap .detailCard .transactionbar .progress {
+        height: 20px; }
+        .detailCardWrap .detailCard .transactionbar .progress .progress-bar {
+          background: #41BF53; }
+          .detailCardWrap .detailCard .transactionbar .progress .progress-bar span {
+            text-align: right;
+            padding-right: 10px; }
     .detailCardWrap .detailCard p.statcard-title {
       font-family: "Source Sans Pro", sans-serif;
       color: #17173C;
@@ -561,6 +578,25 @@ footer {
     padding: 35px 25px; }
     .detailCardWrap .transactionDetails img {
       float: left; }
+    .detailCardWrap .transactionDetails .row.ticketspent {
+      padding-top: 10px;
+      width: 100%; }
+      .detailCardWrap .transactionDetails .row.ticketspent .title {
+        text-align: right;
+        font-size: 12px;
+        font-weight: 700;
+        color: #3D5873;
+        margin-bottom: 0px; }
+        .detailCardWrap .transactionDetails .row.ticketspent .title p {
+          margin: 0px; }
+    .detailCardWrap .transactionDetails p.address {
+      font-family: "Source Sans Pro", sans-serif;
+      background: #D4F0FD;
+      margin: 0px;
+      padding: 2px 5px;
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 700; }
     .detailCardWrap .transactionDetails p.statcard-title {
       font-family: "Source Sans Pro", sans-serif;
       color: #17173C;
@@ -576,8 +612,9 @@ footer {
       padding-top: 25px; }
       .detailCardWrap .transactionDetails .detailwrap .col-4.title {
         font-weight: 700;
-        color: #3D5873;
         margin-bottom: 5px; }
+        .detailCardWrap .transactionDetails .detailwrap .col-4.title p {
+          color: #3D5873; }
       .detailCardWrap .transactionDetails .detailwrap p {
         color: #8997A5;
         font-size: 12px;
@@ -609,6 +646,8 @@ footer {
     transition: 0.1s linear; }
     .InputOuput table#blockchainTable tr.data td.blocks {
       color: #2970FF; }
+    .InputOuput table#blockchainTable tr.data td.blocks.hover-underline:hover {
+      text-decoration: underline; }
     .InputOuput table#blockchainTable tr.data td.selector {
       position: relative;
       display: flex;
@@ -628,6 +667,70 @@ footer {
   .InputOuput table#blockchainTable tr.data:hover {
     background: #eeeeee; }
 
+.voteinfo {
+  padding-top: 60px; }
+  .voteinfo .row .col-md-12 {
+    padding-left: 0px; }
+  .voteinfo .row .data {
+    color: #8997A5; }
+    .voteinfo .row .data td:nth-child(2) {
+      font-size: 12px; }
+    .voteinfo .row .data td:nth-child(3) {
+      padding-left: 20px;
+      position: relative; }
+    .voteinfo .row .data span {
+      position: absolute;
+      left: 0px;
+      width: 15px;
+      height: 15px;
+      margin-top: 5px;
+      border-radius: 25px; }
+    .voteinfo .row .data span.no {
+      background: #ec7955;
+      border: 3px solid #f6c1b1; }
+    .voteinfo .row .data span.yes {
+      background: #0ead8f;
+      border: 3px solid #33eecb; }
+    .voteinfo .row .data span.abstain {
+      background: #69d3f5;
+      border: 3px solid #c9effb; }
+  .voteinfo table#voteinfotable {
+    width: 100%;
+    font-family: "Source Sans Pro", sans-serif; }
+    .voteinfo table#voteinfotable tr {
+      border-bottom: 1px solid #d1d7dc; }
+    .voteinfo table#voteinfotable tr.heading {
+      background: #ffffff;
+      color: #17173C;
+      height: 40px; }
+    .voteinfo table#voteinfotable tr.data {
+      font-family: "Inconsolata", monospace;
+      height: 50px;
+      cursor: pointer;
+      transition: 0.1s linear; }
+      .voteinfo table#voteinfotable tr.data td.blocks {
+        color: #2970FF; }
+      .voteinfo table#voteinfotable tr.data td.blocks.hover-underline:hover {
+        text-decoration: underline; }
+      .voteinfo table#voteinfotable tr.data td.selector {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50px;
+        height: 50px; }
+        .voteinfo table#voteinfotable tr.data td.selector span {
+          position: absolute;
+          background: none;
+          border: 2px solid #2970FF;
+          width: 20px;
+          height: 20px;
+          border-radius: 50px; }
+        .voteinfo table#voteinfotable tr.data td.selector span.clicked {
+          background: #2970FF; }
+    .voteinfo table#voteinfotable tr.data:hover {
+      background: #eeeeee; }
+
 .tableWrapper .title {
   font-family: "Source Sans Pro", sans-serif;
   color: #2970FF;
@@ -645,5 +748,12 @@ footer {
 @media (max-width: 600px) {
   header .right .searchbox input {
     width: 150px; } }
+@media (max-width: 1140px) {
+  .detailCardWrap {
+    display: block; }
+    .detailCardWrap .detailCard {
+      width: 100%; }
+    .detailCardWrap .transactionDetails {
+      flex: 1; } }
 
 /*# sourceMappingURL=main.css.map */
