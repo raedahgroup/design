@@ -1,4 +1,12 @@
-@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700|Source+Sans+Pro:400,600");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata:400,700|Source+Sans+Pro:300,400,600,700");
+::-webkit-scrollbar {
+  display: none; }
+
+#mainContainer {
+  padding-bottom: 60px;
+  height: calc( 100vh - 114px);
+  overflow-y: scroll; }
+
 header {
   height: 64px;
   background-color: #ffffff;
@@ -216,9 +224,26 @@ body {
       color: #17173C;
       margin-bottom: 0px;
       font-size: 14px; }
+      .networkStatsWrapper .statCard p.statcard-title span.confirmation {
+        border: 1px solid #FD714A;
+        color: #FD714A;
+        padding: 2px 5px;
+        margin-left: 5px;
+        font-size: 12px; }
+    .networkStatsWrapper .statCard p.address {
+      font-family: "Source Sans Pro", sans-serif;
+      background: #D4F0FD;
+      margin-top: 5px;
+      padding: 2px 5px;
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 700; }
     .networkStatsWrapper .statCard .heading {
       color: #8997A5;
       font-size: 12px; }
+    .networkStatsWrapper .statCard .data.secondary {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 700; }
     .networkStatsWrapper .statCard .data {
       font-family: "Inconsolata", monospace;
       font-size: 22px;
@@ -232,6 +257,8 @@ body {
         font-size: 16px;
         line-height: 29px;
         margin-left: 6px; }
+      .networkStatsWrapper .statCard .data .blue {
+        color: #2970FF; }
     .networkStatsWrapper .statCard .subdata {
       display: flex;
       flex-direction: row;
@@ -451,6 +478,161 @@ footer {
 .blockRewardsWrapper,
 .proofofstakeWrapper {
   padding-right: 50px; }
+
+.detailCardWrap {
+  display: flex;
+  background: #eaeaea; }
+  .detailCardWrap .detailCard {
+    position: relative;
+    width: 50%;
+    background: white;
+    padding: 35px 25px;
+    font-family: "Source Sans Pro", sans-serif; }
+    .detailCardWrap .detailCard img {
+      float: left; }
+    .detailCardWrap .detailCard p.statcard-title {
+      font-family: "Source Sans Pro", sans-serif;
+      color: #17173C;
+      margin-bottom: 0px;
+      font-size: 14px; }
+      .detailCardWrap .detailCard p.statcard-title span.confirmation.pending {
+        border: 1px solid #FD714A;
+        color: #FD714A;
+        padding: 2px 5px;
+        margin-left: 5px;
+        font-size: 12px; }
+      .detailCardWrap .detailCard p.statcard-title span.confirmation.confirmed {
+        border: 1px solid #1dd0aa;
+        color: #1dd0aa;
+        padding: 2px 5px;
+        margin-left: 5px;
+        font-size: 12px; }
+    .detailCardWrap .detailCard p.address {
+      font-family: "Source Sans Pro", sans-serif;
+      background: #D4F0FD;
+      margin-top: 10px;
+      padding: 2px 5px;
+      border-radius: 2px;
+      font-size: 12px;
+      font-weight: 700; }
+    .detailCardWrap .detailCard .heading {
+      color: #8997A5;
+      font-size: 12px; }
+    .detailCardWrap .detailCard .data.secondary {
+      font-family: "Source Sans Pro", sans-serif;
+      font-weight: 700; }
+    .detailCardWrap .detailCard .data {
+      font-family: "Inconsolata", monospace;
+      font-size: 22px;
+      font-weight: bold;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end; }
+      .detailCardWrap .detailCard .data p {
+        margin: 0px; }
+      .detailCardWrap .detailCard .data span {
+        font-size: 16px;
+        line-height: 29px;
+        margin-left: 6px; }
+      .detailCardWrap .detailCard .data .blue {
+        color: #2970FF; }
+    .detailCardWrap .detailCard .subdata {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-end;
+      font-weight: semibold;
+      color: #8997A5; }
+      .detailCardWrap .detailCard .subdata p {
+        margin: 0px; }
+      .detailCardWrap .detailCard .subdata span {
+        font-size: 12px;
+        margin-left: 6px; }
+  .detailCardWrap .detailCard::after {
+    content: "";
+    position: absolute;
+    right: -25px;
+    top: 50%;
+    border-top: 25px solid transparent;
+    border-left: 25px solid white;
+    border-bottom: 25px solid transparent;
+    transform: translateY(-50%); }
+  .detailCardWrap .transactionDetails {
+    flex: 1;
+    padding: 35px 25px; }
+    .detailCardWrap .transactionDetails img {
+      float: left; }
+    .detailCardWrap .transactionDetails p.statcard-title {
+      font-family: "Source Sans Pro", sans-serif;
+      color: #17173C;
+      margin-bottom: 0px;
+      font-size: 14px; }
+      .detailCardWrap .transactionDetails p.statcard-title span.confirmation {
+        border: 1px solid #FD714A;
+        color: #FD714A;
+        padding: 2px 5px;
+        margin-left: 5px;
+        font-size: 12px; }
+    .detailCardWrap .transactionDetails .detailwrap {
+      padding-top: 25px; }
+      .detailCardWrap .transactionDetails .detailwrap .col-4.title {
+        font-weight: 700;
+        color: #3D5873;
+        margin-bottom: 5px; }
+      .detailCardWrap .transactionDetails .detailwrap p {
+        color: #8997A5;
+        font-size: 12px;
+        margin-bottom: 5px;
+        font-family: "Source Sans Pro", sans-serif; }
+      .detailCardWrap .transactionDetails .detailwrap p.blue {
+        color: #2970FF; }
+      .detailCardWrap .transactionDetails .detailwrap .col-4 {
+        text-align: right;
+        padding-right: 0px; }
+
+.InputOuput .row .col-md-6:nth-child(1) {
+  padding-left: 0px; }
+.InputOuput .row .col-md-6:nth-child(2) {
+  padding-right: 0px; }
+.InputOuput table#blockchainTable {
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif; }
+  .InputOuput table#blockchainTable tr {
+    border-bottom: 1px solid #d1d7dc; }
+  .InputOuput table#blockchainTable tr.heading {
+    background: #ffffff;
+    color: #17173C;
+    height: 40px; }
+  .InputOuput table#blockchainTable tr.data {
+    font-family: "Inconsolata", monospace;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.1s linear; }
+    .InputOuput table#blockchainTable tr.data td.blocks {
+      color: #2970FF; }
+    .InputOuput table#blockchainTable tr.data td.selector {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px; }
+      .InputOuput table#blockchainTable tr.data td.selector span {
+        position: absolute;
+        background: none;
+        border: 2px solid #2970FF;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px; }
+      .InputOuput table#blockchainTable tr.data td.selector span.clicked {
+        background: #2970FF; }
+  .InputOuput table#blockchainTable tr.data:hover {
+    background: #eeeeee; }
+
+.tableWrapper .title {
+  font-family: "Source Sans Pro", sans-serif;
+  color: #2970FF;
+  font-size: 20px;
+  margin-bottom: 30px; }
 
 @media (min-width: 1400px) {
   .container {
