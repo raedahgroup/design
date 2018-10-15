@@ -10,6 +10,9 @@
   height: calc( 100vh - 114px);
   overflow-y: scroll; }
 
+table tr td {
+  word-wrap: break-word; }
+
 header {
   height: 64px;
   background-color: #ffffff;
@@ -100,7 +103,7 @@ body {
   background-color: #F4F6F6; }
 
 .decBlockchainWrapper {
-  padding: 60px 0px; }
+  padding: 60px 12.5px; }
   .decBlockchainWrapper .col-lg-4.col-md-6 {
     position: relative;
     height: 100px;
@@ -207,7 +210,7 @@ body {
         height: 180px; }
 
 .networkStatsWrapper {
-  padding: 60px 0px; }
+  padding: 60px 12.5px; }
   .networkStatsWrapper .title {
     font-family: "Source Sans Pro", sans-serif;
     color: #2970FF;
@@ -218,8 +221,7 @@ body {
     padding: 35px 25px;
     font-family: "Source Sans Pro", sans-serif;
     border-radius: 4px;
-    margin-bottom: 20px;
-    margin-right: 35px; }
+    margin-bottom: 20px; }
     .networkStatsWrapper .statCard img {
       float: left; }
     .networkStatsWrapper .statCard p.statcard-title {
@@ -309,6 +311,8 @@ body {
       height: 50px;
       cursor: pointer;
       transition: 0.1s linear; }
+      .blockhchainWrapper table#blockchainTable tr.data td:last-child span {
+        margin-left: 7.5px; }
       .blockhchainWrapper table#blockchainTable tr.data td.blocks {
         color: #2970FF; }
       .blockhchainWrapper table#blockchainTable tr.data td.selector {
@@ -531,7 +535,8 @@ footer {
       padding: 2px 5px;
       border-radius: 2px;
       font-size: 12px;
-      font-weight: 700; }
+      font-weight: 700;
+      word-wrap: break-word; }
     .detailCardWrap .detailCard .heading {
       color: #8997A5;
       font-size: 12px; }
@@ -596,7 +601,8 @@ footer {
       padding: 2px 5px;
       border-radius: 2px;
       font-size: 12px;
-      font-weight: 700; }
+      font-weight: 700;
+      word-wrap: break-word; }
     .detailCardWrap .transactionDetails p.statcard-title {
       font-family: "Source Sans Pro", sans-serif;
       color: #17173C;
@@ -731,11 +737,15 @@ footer {
     .voteinfo table#voteinfotable tr.data:hover {
       background: #eeeeee; }
 
-.tableWrapper .title {
-  font-family: "Source Sans Pro", sans-serif;
-  color: #2970FF;
-  font-size: 20px;
-  margin-bottom: 30px; }
+.tableWrapper {
+  overflow-x: scroll; }
+  .tableWrapper table {
+    padding: 0px 10px; }
+  .tableWrapper .title {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #2970FF;
+    font-size: 20px;
+    margin-bottom: 30px; }
 
 @media (min-width: 1400px) {
   .container {
@@ -753,7 +763,29 @@ footer {
     display: block; }
     .detailCardWrap .detailCard {
       width: 100%; }
+    .detailCardWrap .detailCard:after {
+      display: none; }
     .detailCardWrap .transactionDetails {
-      flex: 1; } }
+      flex: 1; }
+
+  .tableWrapper {
+    flex: 0 0 100%;
+    max-width: 100% !important; }
+
+  #mainContainer.stats .title {
+    font-size: 18px; } }
+@media (min-width: 1140px) and (max-width: 1200px) {
+  #mainContainer.stats .title {
+    font-size: 24px; } }
+@media (min-width: 991px) and (max-width: 1200px) {
+  .networkStatsWrapper .statCard .data {
+    font-size: 18px; }
+
+  .detailCardWrap .detailCard .data {
+    font-size: 18px; } }
+@media (max-width: 992px) {
+  #mainContainer.container {
+    max-width: 100%;
+    padding: 5%; } }
 
 /*# sourceMappingURL=main.css.map */

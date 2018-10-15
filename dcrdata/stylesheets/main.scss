@@ -38,6 +38,13 @@ $skyblue : #D4F0FD;
     height: calc( 100vh - 114px);
     overflow-y: scroll;
 }
+table {
+    tr {
+        td {
+            word-wrap: break-word;
+        }
+    }
+}
 header {
     height:$header-height;
     background-color: $header-color;
@@ -156,7 +163,7 @@ body {
     background-color: $main-background;
 }
 .decBlockchainWrapper {
-    padding: $container-padding 0px ;
+    padding: $container-padding 12.5px;
     .col-lg-4.col-md-6 {
         position: relative;
         height: $block-height;
@@ -296,7 +303,7 @@ body {
 }
 
 .networkStatsWrapper {
-    padding: 60px 0px;
+    padding: $container-padding 12.5px;
     .title {
         font-family: $primary-font;
         color:$title-color;
@@ -309,7 +316,6 @@ body {
         font-family: $primary-font;
         border-radius: $border-radius;
         margin-bottom:20px;
-        margin-right:35px;
         img {
             float:left;
         }
@@ -421,6 +427,11 @@ body {
             height: 50px;
             cursor:pointer;
             transition: 0.1s linear;
+            td:last-child {
+                span {
+                    margin-left: 7.5px;
+                }
+            }
             td.blocks {
                 color:$title-color;
             }
@@ -702,6 +713,7 @@ footer {
             border-radius: 2px;
             font-size: 12px;
             font-weight: 700;
+            word-wrap: break-word;
         }
         .heading {
             color: $light-grey;
@@ -784,6 +796,7 @@ footer {
             border-radius: 2px;
             font-size: 12px;
             font-weight: 700;
+            word-wrap: break-word;
         }
         p.statcard-title {
             font-family: $primary-font;
@@ -964,6 +977,10 @@ footer {
     }
 }
 .tableWrapper {
+    overflow-x: scroll;
+    table {
+        padding: 0px 10px;
+    }
     .title {
         font-family: $primary-font;
         color:$title-color;
@@ -1012,8 +1029,49 @@ footer {
         .detailCard {
             width: 100%;
         }
+        .detailCard:after {
+            display: none;
+        }
         .transactionDetails {
             flex: 1;
         }
+    }
+    .tableWrapper {
+        flex: 0 0 100%;
+        max-width: 100% !important;
+    }
+    #mainContainer.stats{
+        .title {
+            font-size: 18px;
+        }
+    }
+}
+@media (min-width: 1140px) and (max-width: 1200px) {
+    #mainContainer.stats{
+        .title {
+            font-size: 24px;
+        }
+    }
+}
+@media (min-width: 991px) and (max-width: 1200px) {
+    .networkStatsWrapper {
+        .statCard {
+            .data {
+                font-size: 18px;
+            }
+        }
+    }
+    .detailCardWrap {
+        .detailCard {
+            .data {
+                font-size: 18px;
+            }
+        }
+    }
+}
+@media (max-width: 992px) {
+    #mainContainer.container {
+        max-width: 100%;
+        padding: 5%;
     }
 }
