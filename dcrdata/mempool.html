@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decred - Autonomous Digital Currency</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+        <link rel="stylesheet" href="stylesheets/main.css">
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div class="logo"><img src="img/logo.png" alt=""></div>
+                <div class="right">
+                    <div class="searchbox">
+                        <img src="img/search.png" alt="">
+                        <input type="text" placeholder="Search for block,transaction or address" class="hide">
+                    </div>
+                    <div class="switch">
+                        <span>DCR</span>
+                        <span><img src="img/switch.png" alt=""></span>
+                        <span>USD</span>
+                    </div>
+                    <div class="menu">
+                        <span class="one"></span>
+                        <span class="two"></span>
+                        <span class="three"></span>
+                    </div>
+                </div>
+            </div>
+
+        </header>
+        <div id="mainContainer" class="container">
+            <div class="row">
+                <div class="col-md-12 networkStatsWrapper">
+                    <h3 class="title">Mempool</h3>
+
+                    <div class="detailCardWrap">
+                        <div class="detailCard">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span><span class="circle grey"></span><p class="statcard-title">Current Mempool</p></span>
+                                </div>
+
+                                <div class="col-sm-4">
+                                    <div class="heading">Total Sent</div>
+                                    <div class="data secondary">
+                                        <p class="count">138.95</p>
+                                        <span class="subcount">167356</span>
+                                        <span class="currencyName">DCR</span>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="heading">Last Block</div>
+                                    <div class="data secondary">
+                                        <p class="count blue">219332</p>
+                                    </div>
+                                </div>
+                                <div class="col-sm-3">
+                                    <div class="heading">Since Last Block</div>
+                                    <div class="data secondary">
+                                        <p class="count">37</p>
+                                        <span class="currencyName">Seconds ago</span>
+
+                                    </div>
+                                </div>
+                                <div class="col-sm-2">
+                                    <div class="heading">Size</div>
+                                    <div class="data secondary">
+                                        <p class="count">6.50</p>
+                                        <span class="currencyName">KB</span>
+
+                                    </div>
+                                </div>
+                                <!-- <div class="col-sm-12">
+                                    <div class="row transactionbar">
+                                        <div class="col-2">
+                                            <p>Maturity:</p>
+                                        </div>
+                                        <div class="col">
+                                            <div class="progress">
+                                                <div class="progress-bar" role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"><span>198 of 248 blocks</span></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                        <div class="transactionDetails">
+                            <div class="row">
+                                <div class="col-12">
+                                    <span><img src="" alt=""><p class="statcard-title">Transaction Details </p></span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="detailwrap">
+                                        <div class="row time">
+                                            <div class="col-4 title"><p>Time:</p></div>
+                                            <div class="col-8"><p>TX Info:</p></div>
+                                        </div>
+                                        <div class="row txinfo">
+                                            <div class="col-4 title"><p>TX Info:</p></div>
+                                            <div class="col-8"><p class="blue">decoded - hex</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="detailwrap">
+                                        <div class="row rate">
+                                            <div class="col-4 title"><p>Rate:</p></div>
+                                            <div class="col-8"><p>0.0010223 DCR</p></div>
+                                        </div>
+                                        <div class="row type">
+                                            <div class="col-4 title"><p>Type:</p></div>
+                                            <div class="col-8"><p>Regular</p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-md-12 voteinfo mempool">
+                    <div class="row">
+                        <div class="col-12 tableWrapper">
+                            <div>
+                                <p class="title">Votes</p>
+                                <table id="voteinfotable" class="rightalign">
+                                    <tr class="heading">
+                                        <th>Transaction ID</th>
+                                        <th>Version</th>
+                                        <th>Last Block Valid</th>
+                                        <th>Issue ID</th>
+                                        <th>Choice ID</th>
+                                        <th>Total DCR</th>
+                                        <th>Size</th>
+                                        <th>Time in Mempool</th>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>5</td>
+                                        <td>true</td>
+                                        <td>lnfeatures</td>
+                                        <td><p><span class="yes"></span>Yes</p></td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>5</td>
+                                        <td>true</td>
+                                        <td>lnfeatures</td>
+                                        <td><p><span class="yes"></span>Yes</p></td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>5</td>
+                                        <td>true</td>
+                                        <td>lnfeatures</td>
+                                        <td><p><span class="yes"></span>Yes</p></td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>5</td>
+                                        <td>true</td>
+                                        <td>lnfeatures</td>
+                                        <td><p><span class="yes"></span>Yes</p></td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>5</td>
+                                        <td>true</td>
+                                        <td>lnfeatures</td>
+                                        <td><p><span class="yes"></span>Yes</p></td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>5</td>
+                                        <td>true</td>
+                                        <td>lnfeatures</td>
+                                        <td><p><span class="yes"></span>Yes</p></td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>5s</td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 tableWrapper">
+                            <div>
+                                <p class="title">Tickets</p>
+                                <table id="voteinfotable" class="rightalign">
+                                    <tr class="heading">
+                                        <th>Transaction ID</th>
+                                        <th>Total DCR</th>
+                                        <th>Size</th>
+                                        <th>Times in Mempool</th>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+                        <div class="col-12 tableWrapper">
+                            <div>
+                                <p class="title">Transactions</p>
+                                <table id="voteinfotable" class="rightalign">
+                                    <tr class="heading">
+                                        <th>Transaction ID</th>
+                                        <th>Total DCR</th>
+                                        <th>Size</th>
+                                        <th>Times in Mempool</th>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+                                    <tr class="data">
+                                        <td class="blocks">90e2dc3a623ab06c1c59c0cf94eb6e198d5ac79a33f3c8b8e9de9c2f25fc8e3d</td>
+                                        <td>88.07092171</td>
+                                        <td>296 B</td>
+                                        <td>15m 5s</td>
+                                    </tr>
+
+                                </table>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <footer>
+            <div class="container">
+                <div class="left">
+                    <a href=""><p>decode/broadcast tx</p></a>
+                    <a href=""><p>json-api docs</p></a>
+                </div>
+                <div class="center">
+                    <p>dcrdata v2.0 2017(ISC)</p>
+                </div>
+                <div class="right">
+                    <p>disconnected</p> <span class="red"></span>
+                </div>
+            </div>
+        </footer>
+    </body>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="js/script.js"></script>
+</html>

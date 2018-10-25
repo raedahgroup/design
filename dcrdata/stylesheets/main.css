@@ -13,6 +13,9 @@
 table tr td {
   word-wrap: break-word; }
 
+.innerrow {
+  margin: 0px !important; }
+
 header {
   height: 64px;
   background-color: #ffffff;
@@ -276,6 +279,33 @@ body {
         font-size: 12px;
         margin-left: 6px; }
 
+.developmentWrapper {
+  padding: 60px 12.5px; }
+  .developmentWrapper .title {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #2970FF;
+    font-size: 20px;
+    margin-bottom: 30px; }
+  .developmentWrapper .detailCardWrap {
+    font-family: "Source Sans Pro", sans-serif;
+    color: #2970FF;
+    font-size: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+    background: none; }
+    .developmentWrapper .detailCardWrap .detailCard {
+      margin-bottom: 30px;
+      width: auto; }
+    .developmentWrapper .detailCardWrap .detailCard:after {
+      display: none; }
+  .developmentWrapper .qrwrap .center {
+    color: black;
+    font-size: 0.8em;
+    margin: 0px; }
+  .developmentWrapper .qrwrap img {
+    width: 100%;
+    padding-right: 15px; }
+
 .showmore {
   background: white;
   display: flex;
@@ -505,7 +535,7 @@ footer {
         font-size: 12px;
         font-weight: 600; }
       .detailCardWrap .detailCard .transactionbar .progress {
-        height: 20px; }
+        height: 25px; }
         .detailCardWrap .detailCard .transactionbar .progress .progress-bar {
           background: #41BF53; }
           .detailCardWrap .detailCard .transactionbar .progress .progress-bar span {
@@ -686,7 +716,7 @@ footer {
       position: relative; }
     .voteinfo .row .data span {
       position: absolute;
-      left: 0px;
+      left: -20px;
       width: 15px;
       height: 15px;
       margin-top: 5px;
@@ -737,8 +767,23 @@ footer {
     .voteinfo table#voteinfotable tr.data:hover {
       background: #eeeeee; }
 
+.mempool.voteinfo .row .data td:nth-child(5) p {
+  margin: 0px !important;
+  float: right;
+  position: relative; }
+
+.mempool.voteinfo table.rightalign tr.heading th:first-child {
+  text-align: left; }
+.mempool.voteinfo table.rightalign tr.heading th {
+  text-align: right; }
+.mempool.voteinfo table.rightalign tr.data td:first-child {
+  text-align: left; }
+.mempool.voteinfo table.rightalign tr.data td {
+  text-align: right; }
+
 .tableWrapper {
-  overflow-x: scroll; }
+  overflow-x: scroll;
+  margin-bottom: 30px; }
   .tableWrapper table {
     padding: 0px 10px; }
   .tableWrapper .title {
@@ -746,6 +791,15 @@ footer {
     color: #2970FF;
     font-size: 20px;
     margin-bottom: 30px; }
+
+table tr th:first-child {
+  padding-left: 10px; }
+table tr th:last-child {
+  padding-right: 10px; }
+table tr td:first-child {
+  padding-left: 10px; }
+table tr td:last-child {
+  padding-right: 10px; }
 
 @media (min-width: 1400px) {
   .container {
