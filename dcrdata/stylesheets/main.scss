@@ -37,11 +37,18 @@ $skyblue : #D4F0FD;
     padding-bottom: 60px;
     height: calc( 100vh - 114px);
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 table {
     tr {
         td {
             word-wrap: break-word;
+            padding: 0px 5px;
+        }
+    }
+    tr {
+        th {
+            padding: 0px 5px;
         }
     }
 }
@@ -52,7 +59,7 @@ header {
     height:$header-height;
     background-color: $header-color;
     height: 64px;
-    .container {
+    .headerwrap {
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -167,7 +174,7 @@ body {
 }
 .decBlockchainWrapper {
     padding: $container-padding 12.5px;
-    .col-lg-4.col-md-6 {
+    .decredblockWrap {
         position: relative;
         height: $block-height;
         margin-bottom: 20px;
@@ -509,7 +516,7 @@ footer {
     font-family: $primary-font;
     color:$light-grey;
     font-size: 12px;
-    .container {
+    .footerwrap {
         display: flex;
         flex-direction: row;
         height: 50px;
@@ -634,10 +641,7 @@ footer {
     }
 }
 #mainContainer.stats.collaspe {
-    .title {
-    }
     .statCardWrap {
-        margin-bottom: 0px;
         height: 75px;
         .heading {
             justify-content: flex-start;
@@ -655,6 +659,7 @@ footer {
                     margin-bottom: 0px;
                     background: $light-grey;
                     margin-top: 0px;
+                    height: 20px;
                     .progress-bar {
                         border-radius: 2px;
                         background: $green;
@@ -691,12 +696,13 @@ footer {
 .networkStatsWrap,
 .blockRewardsWrapper,
 .proofofstakeWrapper {
-    padding-right: 50px;
+    // padding-right: 50px;
 }
 .detailCardWrap {
     display: flex;
     background: #eaeaea;
     .detailCard {
+        align-items: center;
         position: relative;
         width: 50%;
         background: white;
@@ -729,6 +735,7 @@ footer {
             color:$dark-grey;
             margin-bottom:0px;
             font-size: 14px;
+            margin-bottom: 20px;
             span.confirmation.pending {
                 border: 1px solid $orange;
                 color: $orange;
@@ -768,10 +775,12 @@ footer {
             font-weight: bold;
             display:flex;
             flex-direction: row;
-            align-items: flex-end;
 
             p {
                 margin:0px;
+            }
+            span.currencyName {
+                font-size: 10px;
             }
              span {
                  font-size: 16px;
@@ -808,12 +817,15 @@ footer {
         transform: translateY(-50%);
     }
     .transactionDetails {
+        display: flex;
+        flex-direction: column;
         flex: 1;
-        padding: 35px 25px;
+        justify-content: center;
+        padding: 40px;
         img {
             float:left;
         }
-        .row.ticketspent {
+        .ticketspent {
             padding-top: 10px;
             width:100%;
             .title {
@@ -840,7 +852,7 @@ footer {
         p.statcard-title {
             font-family: $primary-font;
             color:$dark-grey;
-            margin-bottom:0px;
+            margin-bottom:20px;
             font-size: 14px;
             span.confirmation {
                 border: 1px solid $orange;
@@ -851,8 +863,7 @@ footer {
             }
         }
         .detailwrap {
-            padding-top: 25px;
-            .col-4.title {
+            .title {
                 font-weight: 700;
                 margin-bottom: 5px;
                 p {
@@ -868,22 +879,10 @@ footer {
             p.blue {
                 color:$title-color;
             }
-            .col-4 {
-                text-align: right;
-                padding-right: 0px;
-            }
         }
     }
 }
 .InputOuput {
-    .row {
-        .col-md-6:nth-child(1) {
-            padding-left: 0px;
-        }
-        .col-md-6:nth-child(2) {
-            padding-right: 0px;
-        }
-    }
     table#blockchainTable {
         tr {
             border-bottom: 1px solid lighten($light-grey, 25%);
@@ -932,40 +931,35 @@ footer {
     }
 }
 .voteinfo {
-    padding-top: 60px;
-    .row {
-        .col-md-12 {
-            padding-left: 0px;
+    // padding-top: 60px;
+    .data {
+        color:$light-grey;
+        td:nth-child(2) {
+            font-size: 12px;
         }
-        .data {
-            color:$light-grey;
-            td:nth-child(2) {
-                font-size: 12px;
-            }
-            td:nth-child(3) {
-                padding-left: 20px;
-                position: relative;
-            }
-            span {
-                position: absolute;
-                left:-20px;
-                width: 15px;
-                height:15px;
-                margin-top: 5px;
-                border-radius: 25px;
-            }
-            span.no {
-                background: #ec7955;
-                border:3px solid lighten(#ec7955,20%);
-            }
-            span.yes {
-                background: #0ead8f;
-                border:3px solid lighten(#0ead8f,20%);
-            }
-            span.abstain {
-                background: #69d3f5;
-                border:3px solid lighten(#69d3f5,20%);
-            }
+        td:nth-child(3) {
+            padding-left: 20px;
+            position: relative;
+        }
+        span {
+            position: absolute;
+            left:-20px;
+            width: 15px;
+            height:15px;
+            margin-top: 5px;
+            border-radius: 25px;
+        }
+        span.no {
+            background: #ec7955;
+            border:3px solid lighten(#ec7955,20%);
+        }
+        span.yes {
+            background: #0ead8f;
+            border:3px solid lighten(#0ead8f,20%);
+        }
+        span.abstain {
+            background: #69d3f5;
+            border:3px solid lighten(#69d3f5,20%);
         }
     }
     table#voteinfotable {
@@ -1016,14 +1010,12 @@ footer {
     }
 }
 .mempool.voteinfo {
-    .row {
-        .data {
-            td:nth-child(5) {
-                p {
-                    margin:0px !important;
-                    float: right;
-                    position: relative;
-                }
+    .data {
+        td:nth-child(5) {
+            p {
+                margin:0px !important;
+                float: right;
+                position: relative;
             }
         }
     }
@@ -1075,11 +1067,6 @@ table {
         td:last-child {
             padding-right: 10px;
         }
-    }
-}
-@media (min-width: 1400px) {
-    .container {
-        max-width: 1280px !important;
     }
 }
 @media (min-width: 800px) {
@@ -1158,9 +1145,9 @@ table {
         }
     }
 }
-@media (max-width: 992px) {
-    #mainContainer.container {
-        max-width: 100%;
-        padding: 5%;
-    }
-}
+// @media (max-width: 992px) {
+//     #mainContainer {
+//         max-width: 100%;
+//         padding: 5%;
+//     }
+// }

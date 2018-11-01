@@ -8,10 +8,14 @@
 #mainContainer {
   padding-bottom: 60px;
   height: calc( 100vh - 114px);
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  overflow-x: hidden; }
 
 table tr td {
-  word-wrap: break-word; }
+  word-wrap: break-word;
+  padding: 0px 5px; }
+table tr th {
+  padding: 0px 5px; }
 
 .innerrow {
   margin: 0px !important; }
@@ -20,7 +24,7 @@ header {
   height: 64px;
   background-color: #ffffff;
   height: 64px; }
-  header .container {
+  header .headerwrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -107,7 +111,7 @@ body {
 
 .decBlockchainWrapper {
   padding: 60px 12.5px; }
-  .decBlockchainWrapper .col-lg-4.col-md-6 {
+  .decBlockchainWrapper .decredblockWrap {
     position: relative;
     height: 100px;
     margin-bottom: 20px; }
@@ -373,31 +377,31 @@ footer {
   font-family: "Source Sans Pro", sans-serif;
   color: #8997A5;
   font-size: 12px; }
-  footer .container {
+  footer .footerwrap {
     display: flex;
     flex-direction: row;
     height: 50px;
     align-items: center;
     justify-content: space-between; }
-    footer .container p {
+    footer .footerwrap p {
       margin-bottom: 0px; }
-    footer .container .left * {
+    footer .footerwrap .left * {
       float: left; }
-    footer .container .right {
+    footer .footerwrap .right {
       position: relative;
       padding-right: 17px;
       display: flex;
       align-items: center; }
-      footer .container .right span {
+      footer .footerwrap .right span {
         position: absolute;
         width: 15px;
         height: 15px;
         right: 0px;
         border-radius: 25px; }
-      footer .container .right span.red {
+      footer .footerwrap .right span.red {
         background: red;
         border: 3px solid #ffcccc; }
-      footer .container .right span.green {
+      footer .footerwrap .right span.green {
         background: #0ead8f;
         border: 3px solid #91f6e3; }
 
@@ -473,7 +477,6 @@ footer {
           transition: .6s linear; }
 
 #mainContainer.stats.collaspe .statCardWrap {
-  margin-bottom: 0px;
   height: 75px; }
   #mainContainer.stats.collaspe .statCardWrap .heading {
     justify-content: flex-start;
@@ -489,7 +492,8 @@ footer {
         border-radius: 2px;
         margin-bottom: 0px;
         background: #8997A5;
-        margin-top: 0px; }
+        margin-top: 0px;
+        height: 20px; }
         #mainContainer.stats.collaspe .statCardWrap .content .data .progress .progress-bar {
           border-radius: 2px;
           background: #1dd0aa; }
@@ -511,15 +515,11 @@ footer {
         left: calc(5% + 7px);
         z-index: 99; }
 
-.networkStatsWrap,
-.blockRewardsWrapper,
-.proofofstakeWrapper {
-  padding-right: 50px; }
-
 .detailCardWrap {
   display: flex;
   background: #eaeaea; }
   .detailCardWrap .detailCard {
+    align-items: center;
     position: relative;
     width: 50%;
     background: white;
@@ -545,7 +545,8 @@ footer {
       font-family: "Source Sans Pro", sans-serif;
       color: #17173C;
       margin-bottom: 0px;
-      font-size: 14px; }
+      font-size: 14px;
+      margin-bottom: 20px; }
       .detailCardWrap .detailCard p.statcard-title span.confirmation.pending {
         border: 1px solid #FD714A;
         color: #FD714A;
@@ -578,10 +579,11 @@ footer {
       font-size: 22px;
       font-weight: bold;
       display: flex;
-      flex-direction: row;
-      align-items: flex-end; }
+      flex-direction: row; }
       .detailCardWrap .detailCard .data p {
         margin: 0px; }
+      .detailCardWrap .detailCard .data span.currencyName {
+        font-size: 10px; }
       .detailCardWrap .detailCard .data span {
         font-size: 16px;
         line-height: 29px;
@@ -609,20 +611,23 @@ footer {
     border-bottom: 25px solid transparent;
     transform: translateY(-50%); }
   .detailCardWrap .transactionDetails {
+    display: flex;
+    flex-direction: column;
     flex: 1;
-    padding: 35px 25px; }
+    justify-content: center;
+    padding: 40px; }
     .detailCardWrap .transactionDetails img {
       float: left; }
-    .detailCardWrap .transactionDetails .row.ticketspent {
+    .detailCardWrap .transactionDetails .ticketspent {
       padding-top: 10px;
       width: 100%; }
-      .detailCardWrap .transactionDetails .row.ticketspent .title {
+      .detailCardWrap .transactionDetails .ticketspent .title {
         text-align: right;
         font-size: 12px;
         font-weight: 700;
         color: #3D5873;
         margin-bottom: 0px; }
-        .detailCardWrap .transactionDetails .row.ticketspent .title p {
+        .detailCardWrap .transactionDetails .ticketspent .title p {
           margin: 0px; }
     .detailCardWrap .transactionDetails p.address {
       font-family: "Source Sans Pro", sans-serif;
@@ -636,7 +641,7 @@ footer {
     .detailCardWrap .transactionDetails p.statcard-title {
       font-family: "Source Sans Pro", sans-serif;
       color: #17173C;
-      margin-bottom: 0px;
+      margin-bottom: 20px;
       font-size: 14px; }
       .detailCardWrap .transactionDetails p.statcard-title span.confirmation {
         border: 1px solid #FD714A;
@@ -644,28 +649,19 @@ footer {
         padding: 2px 5px;
         margin-left: 5px;
         font-size: 12px; }
-    .detailCardWrap .transactionDetails .detailwrap {
-      padding-top: 25px; }
-      .detailCardWrap .transactionDetails .detailwrap .col-4.title {
-        font-weight: 700;
-        margin-bottom: 5px; }
-        .detailCardWrap .transactionDetails .detailwrap .col-4.title p {
-          color: #3D5873; }
-      .detailCardWrap .transactionDetails .detailwrap p {
-        color: #8997A5;
-        font-size: 12px;
-        margin-bottom: 5px;
-        font-family: "Source Sans Pro", sans-serif; }
-      .detailCardWrap .transactionDetails .detailwrap p.blue {
-        color: #2970FF; }
-      .detailCardWrap .transactionDetails .detailwrap .col-4 {
-        text-align: right;
-        padding-right: 0px; }
+    .detailCardWrap .transactionDetails .detailwrap .title {
+      font-weight: 700;
+      margin-bottom: 5px; }
+      .detailCardWrap .transactionDetails .detailwrap .title p {
+        color: #3D5873; }
+    .detailCardWrap .transactionDetails .detailwrap p {
+      color: #8997A5;
+      font-size: 12px;
+      margin-bottom: 5px;
+      font-family: "Source Sans Pro", sans-serif; }
+    .detailCardWrap .transactionDetails .detailwrap p.blue {
+      color: #2970FF; }
 
-.InputOuput .row .col-md-6:nth-child(1) {
-  padding-left: 0px; }
-.InputOuput .row .col-md-6:nth-child(2) {
-  padding-right: 0px; }
 .InputOuput table#blockchainTable {
   width: 100%;
   font-family: "Source Sans Pro", sans-serif; }
@@ -703,71 +699,67 @@ footer {
   .InputOuput table#blockchainTable tr.data:hover {
     background: #eeeeee; }
 
-.voteinfo {
-  padding-top: 60px; }
-  .voteinfo .row .col-md-12 {
-    padding-left: 0px; }
-  .voteinfo .row .data {
-    color: #8997A5; }
-    .voteinfo .row .data td:nth-child(2) {
-      font-size: 12px; }
-    .voteinfo .row .data td:nth-child(3) {
-      padding-left: 20px;
-      position: relative; }
-    .voteinfo .row .data span {
-      position: absolute;
-      left: -20px;
-      width: 15px;
-      height: 15px;
-      margin-top: 5px;
-      border-radius: 25px; }
-    .voteinfo .row .data span.no {
-      background: #ec7955;
-      border: 3px solid #f6c1b1; }
-    .voteinfo .row .data span.yes {
-      background: #0ead8f;
-      border: 3px solid #33eecb; }
-    .voteinfo .row .data span.abstain {
-      background: #69d3f5;
-      border: 3px solid #c9effb; }
-  .voteinfo table#voteinfotable {
-    width: 100%;
-    font-family: "Source Sans Pro", sans-serif; }
-    .voteinfo table#voteinfotable tr {
-      border-bottom: 1px solid #d1d7dc; }
-    .voteinfo table#voteinfotable tr.heading {
-      background: #ffffff;
-      color: #17173C;
-      height: 40px; }
-    .voteinfo table#voteinfotable tr.data {
-      font-family: "Inconsolata", monospace;
-      height: 50px;
-      cursor: pointer;
-      transition: 0.1s linear; }
-      .voteinfo table#voteinfotable tr.data td.blocks {
-        color: #2970FF; }
-      .voteinfo table#voteinfotable tr.data td.blocks.hover-underline:hover {
-        text-decoration: underline; }
-      .voteinfo table#voteinfotable tr.data td.selector {
-        position: relative;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 50px;
-        height: 50px; }
-        .voteinfo table#voteinfotable tr.data td.selector span {
-          position: absolute;
-          background: none;
-          border: 2px solid #2970FF;
-          width: 20px;
-          height: 20px;
-          border-radius: 50px; }
-        .voteinfo table#voteinfotable tr.data td.selector span.clicked {
-          background: #2970FF; }
-    .voteinfo table#voteinfotable tr.data:hover {
-      background: #eeeeee; }
+.voteinfo .data {
+  color: #8997A5; }
+  .voteinfo .data td:nth-child(2) {
+    font-size: 12px; }
+  .voteinfo .data td:nth-child(3) {
+    padding-left: 20px;
+    position: relative; }
+  .voteinfo .data span {
+    position: absolute;
+    left: -20px;
+    width: 15px;
+    height: 15px;
+    margin-top: 5px;
+    border-radius: 25px; }
+  .voteinfo .data span.no {
+    background: #ec7955;
+    border: 3px solid #f6c1b1; }
+  .voteinfo .data span.yes {
+    background: #0ead8f;
+    border: 3px solid #33eecb; }
+  .voteinfo .data span.abstain {
+    background: #69d3f5;
+    border: 3px solid #c9effb; }
+.voteinfo table#voteinfotable {
+  width: 100%;
+  font-family: "Source Sans Pro", sans-serif; }
+  .voteinfo table#voteinfotable tr {
+    border-bottom: 1px solid #d1d7dc; }
+  .voteinfo table#voteinfotable tr.heading {
+    background: #ffffff;
+    color: #17173C;
+    height: 40px; }
+  .voteinfo table#voteinfotable tr.data {
+    font-family: "Inconsolata", monospace;
+    height: 50px;
+    cursor: pointer;
+    transition: 0.1s linear; }
+    .voteinfo table#voteinfotable tr.data td.blocks {
+      color: #2970FF; }
+    .voteinfo table#voteinfotable tr.data td.blocks.hover-underline:hover {
+      text-decoration: underline; }
+    .voteinfo table#voteinfotable tr.data td.selector {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50px;
+      height: 50px; }
+      .voteinfo table#voteinfotable tr.data td.selector span {
+        position: absolute;
+        background: none;
+        border: 2px solid #2970FF;
+        width: 20px;
+        height: 20px;
+        border-radius: 50px; }
+      .voteinfo table#voteinfotable tr.data td.selector span.clicked {
+        background: #2970FF; }
+  .voteinfo table#voteinfotable tr.data:hover {
+    background: #eeeeee; }
 
-.mempool.voteinfo .row .data td:nth-child(5) p {
+.mempool.voteinfo .data td:nth-child(5) p {
   margin: 0px !important;
   float: right;
   position: relative; }
@@ -801,9 +793,6 @@ table tr td:first-child {
 table tr td:last-child {
   padding-right: 10px; }
 
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1280px !important; } }
 @media (min-width: 800px) {
   header .right .searchbox input {
     width: 200px; }
@@ -837,9 +826,5 @@ table tr td:last-child {
 
   .detailCardWrap .detailCard .data {
     font-size: 18px; } }
-@media (max-width: 992px) {
-  #mainContainer.container {
-    max-width: 100%;
-    padding: 5%; } }
 
 /*# sourceMappingURL=main.css.map */
