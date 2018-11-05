@@ -448,7 +448,6 @@ body {
     }
 }
 
-
 .blockhchainWrapper {
     padding: $container-padding 0px ;
     .title {
@@ -775,7 +774,7 @@ footer {
             font-weight: bold;
             display:flex;
             flex-direction: row;
-
+            align-items: flex-end;
             p {
                 margin:0px;
             }

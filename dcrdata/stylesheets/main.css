@@ -579,7 +579,8 @@ footer {
       font-size: 22px;
       font-weight: bold;
       display: flex;
-      flex-direction: row; }
+      flex-direction: row;
+      align-items: flex-end; }
       .detailCardWrap .detailCard .data p {
         margin: 0px; }
       .detailCardWrap .detailCard .data span.currencyName {
